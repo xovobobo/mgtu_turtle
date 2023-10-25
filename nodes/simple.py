@@ -13,8 +13,6 @@ from geometry_msgs.msg import Twist
 class MgtuTurtle:
     def __init__(self) -> None:
         self.pose = Pose()
-        self.eps = rospy.get_param("~eps", 0.1)
-        self.kp = rospy.get_param("~kp", 1)
         Server(my_param_serverConfig,  self.reconfigure_cb)
         self.service = rospy.Service("/my_service", my_srv, self.srv_cb)
         self.publisher = rospy.Publisher("/turtle1/cmd_vel", Twist, queue_size=10)
