@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name= "road_file_path" default="/home/bobo/Projects/mgtu_ros/src/mgtu_pack/roads/road1.json"/>
+    <arg name="service_topic" default="/mgtu_control"/>
+
+    <node pkg="mgtu_pack" type="control.py" name="my_turtle_ctrl_node" output="screen">
+        <remap from="/my_service" to="$(arg mgtu_control)"/>
+    </node>
+
+
+
+</launch>
