@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name ="target_x" default="0"/>
+    <arg name ="target_y" default="0"/>
+    <arg name= "road_file_path" default="/home/bobo/Projects/mgtu_ros/src/mgtu_pack/roads/road1.json"/>
+
+    <node pkg="mgtu_pack" type="simple.py" name="my_turtle_node" output="screen">
+        <param name="target_x" value="$(arg target_x)"/>
+        <param name="target_y" value="$(arg target_y)"/>
+        <param name="road_file_path" value="$(arg road_file_path)"/>
+    </node>
+
+</launch>

@@ -1,0 +1,5 @@
+uint8 action
+uint8 START = 1
+uint8 STOP = 0
+---
+bool result
